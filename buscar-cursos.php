@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 require 'vendor/autoload.php';
@@ -14,4 +15,6 @@ $buscador = new Buscador($client, $crawler);
 
 $resposta = $buscador->buscar('/cursos-online-programacao/php');
 
-var_dump($resposta);
+foreach ($resposta as $key => $value) {
+    exibeMensagem($value);
+}

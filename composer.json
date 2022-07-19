@@ -1,0 +1,45 @@
+{
+    "name": "alessandromaciel/buscador-cursos",
+    "description": "Projeto que busca os cursos do site da alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Alessandromaciel\\BuscadorCursos\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alessandro Maciel",
+            "email": "alessandromaciel237@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/dom-crawler": "^6.1.0",
+        "symfony/css-selector": "^6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phan/phan": "^5.3"
+    },
+    "scripts": {
+        "cs": "vendor/bin/phpcs --standard=PSR12 src",
+        "test": "phpunit tests/ ",
+        "check" :[
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Executar php_codesniffer e phpunit"
+    }
+}

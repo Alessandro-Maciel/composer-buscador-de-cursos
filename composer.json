@@ -44,5 +44,6 @@
     },
     "scripts-descriptions": {
         "check": "Executar php_codesniffer e phpunit"
-    }
+    },
+    "bin": ["buscar-cursos"]
 }
